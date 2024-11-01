@@ -1,10 +1,10 @@
 {
-  "name": "home",
-  "author": "imsyy",
-  "github": "https://github.com/imsyy/home",
-  "home": "https://imsyy.top",
-  "private": true,
-  "version": "4.1.4",
+  "name": "homepage-profile",
+  "author": "vhming",
+  "github": "https://github.com/vhm1ng/homepage-profile",
+  "home": "https://home.vhming.com",
+  "private": false,
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
