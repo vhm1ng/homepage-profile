@@ -1,14 +1,17 @@
+<!-- src/views/MoreSet/index.vue
+#--------------- A personal homepage, lots of good things ---------------#
+#   homepage-profiles | https://github.com/vhm1ng/homepage-profile       #
+#   fork own imsyy.top | https://github.com/imsyy/home                   #
+#   source code edited by vhm1ng, edited in Vietnamese                   #
+#   easy to use for Vietnamese people                                    #
+#--------------- A personal homepage, lots of good things ---------------#
+-->
+
 <template>
   <div class="set" @mouseenter="closeShow = true" @mouseleave="closeShow = false" @click.stop>
     <transition name="el-fade-in-linear">
-      <close-one
-        class="close"
-        theme="filled"
-        size="28"
-        fill="#ffffff60"
-        v-show="closeShow"
-        @click="store.setOpenState = false"
-      />
+      <close-one class="close" theme="filled" size="28" fill="#ffffff60" v-show="closeShow"
+        @click="store.setOpenState = false" />
     </transition>
     <el-row :gutter="40">
       <el-col :span="12" class="left">
@@ -18,14 +21,14 @@
         </div>
         <div class="version">
           <div class="num">v&nbsp;{{ config.version }}</div>
-          <el-tooltip content="Github 源代码仓库" placement="right" :show-arrow="false">
+          <el-tooltip content="Truy cập Github" placement="right" :show-arrow="false">
             <github-one class="github" theme="outline" size="24" @click="jumpTo(config.github)" />
           </el-tooltip>
         </div>
         <el-card class="update">
           <template #header>
             <div class="card-header">
-              <span>更新日志</span>
+              <span>Cập nhật code</span>
             </div>
           </template>
           <div class="upnote">
@@ -43,7 +46,7 @@
       <el-col :span="12" class="right">
         <div class="title">
           <setting-two theme="filled" size="28" fill="#ffffff60" />
-          <span class="name">全局设置</span>
+          <span class="name">Cài đặt chung</span>
         </div>
         <Set />
       </el-col>
@@ -60,11 +63,12 @@ import config from "@/../package.json";
 const store = mainStore();
 const closeShow = ref(false);
 
-// 站点链接
+// Liên kết trang web
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
   if (!url) return "imsyy.top".split(".");
-  // 判断协议前缀
+
+  // Kiểm tra tiền tố giao thức
   if (url.startsWith("http://") || url.startsWith("https://")) {
     const urlFormat = url.replace(/^(https?:\/\/)/, "");
     return urlFormat.split(".");
@@ -72,12 +76,12 @@ const siteUrl = computed(() => {
   return url.split(".");
 });
 
-// 更新日志
+// Nhật ký cập nhật
 const upData = reactive({
   new: [
     "Sử dụng Vue để tái cấu trúc.",
     "Tùy chỉnh nhanh danh sách nhạc",
-    "Hình nền đã hộ trợ cài đặt cá nhân hóa",
+    "Hình nền đã hỗ trợ cài đặt cá nhân hóa",
     "Máy phát nhạc hỗ trợ điều chỉnh âm lượng",
     "Cải tiến mã nguồn thuần Việt",
   ],
@@ -89,7 +93,7 @@ const upData = reactive({
   ],
 });
 
-// 跳转源代码仓库
+// Chuyển đến kho mã nguồn
 const jumpTo = (url) => {
   window.open(url);
 };
@@ -143,6 +147,7 @@ const jumpTo = (url) => {
         width: 100%;
         height: 260px;
         min-height: 140px;
+
         .bg {
           font-size: 5rem;
         }
@@ -156,14 +161,17 @@ const jumpTo = (url) => {
           .bg {
             font-size: 4.5rem;
           }
+
           .sm {
             font-size: 1.7rem;
           }
         }
+
         @media (max-width: 825px) {
           .bg {
             font-size: 3.8rem;
           }
+
           .sm {
             font-size: 1.3rem;
           }
