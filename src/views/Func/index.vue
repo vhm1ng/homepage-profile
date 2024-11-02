@@ -12,10 +12,10 @@
         <div class="right cards">
           <div class="time">
             <div class="date">
-              <span>{{ currentTime.year }}&nbsp;年&nbsp;</span>
-              <span>{{ currentTime.month }}&nbsp;月&nbsp;</span>
-              <span>{{ currentTime.day }}&nbsp;日&nbsp;</span>
               <span class="sm-hidden">{{ currentTime.weekday }}</span>
+              <span>&nbsp;-&nbsp;{{ currentTime.day }}</span>
+              <span>&nbsp;/&nbsp;{{ currentTime.month }}</span>
+              <span>&nbsp;/&nbsp;{{ currentTime.year }}</span>
             </div>
             <div class="text">
               <span> {{ currentTime.hour }}:{{ currentTime.minute }}:{{ currentTime.second }}</span>
