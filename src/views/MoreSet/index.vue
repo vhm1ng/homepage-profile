@@ -75,12 +75,18 @@ const siteUrl = computed(() => {
 // 更新日志
 const upData = reactive({
   new: [
-    "采用 Vue 进行重构",
-    "音乐歌单支持快速自定义",
-    "壁纸支持个性化设置",
-    "音乐播放器支持音量控制",
+    "Sử dụng Vue để tái cấu trúc.",
+    "Tùy chỉnh nhanh danh sách nhạc",
+    "Hình nền đã hộ trợ cài đặt cá nhân hóa",
+    "Máy phát nhạc hỗ trợ điều chỉnh âm lượng",
+    "Cải tiến mã nguồn thuần Việt",
   ],
-  fix: ["修复天气 API", "时光胶囊显示错误", "移动端动画及细节", "图标更换为 IconPark"],
+  fix: [
+    "Sửa chữa API thời tiết (OUTDATE)",
+    "Lỗi hiển thị thời gian",
+    "Chuyển động và chi tiết trên di động",
+    "Thay đổi API biểu tượng thành API IconPark"
+  ],
 });
 
 // 跳转源代码仓库

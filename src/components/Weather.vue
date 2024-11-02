@@ -13,7 +13,7 @@
     <span class="sm-hidden">{{ weatherData.weather.windpower }}&nbsp;级</span>
   </div>
   <div class="weather" v-else>
-    <span>天气数据获取失败</span>
+    <span>Lỗi API Thời tiết</span>
   </div>
 </template>
 
