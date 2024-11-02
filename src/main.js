@@ -1,10 +1,18 @@
+// src/main.js
+// #--------------- A personal homepage, lots of good things ---------------#
+// #   homepage-profiles | https://github.com/vhm1ng/homepage-profile       #
+// #   fork own imsyy.top | https://github.com/imsyy/home                   #
+// #   source code edited by vhm1ng, edited in Vietnamese                   #
+// #   easy to use for Vietnamese people                                    #
+// #--------------- A personal homepage, lots of good things ---------------#
+
 import { createApp } from "vue";
 import "@/style/style.scss";
 import App from "@/App.vue";
-// 引入 pinia
+// Trích xuất module pinia
 import { createPinia } from "pinia";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
-// swiper
+// Trích xuất module swiper
 import "swiper/css";
 
 const app = createApp(App);
@@ -16,7 +24,7 @@ app.mount("#app");
 
 // PWA
 navigator.serviceWorker.addEventListener("controllerchange", () => {
-  // 弹出更新提醒
-  console.log("站点已更新，刷新后生效");
-  ElMessage("站点已更新，刷新后生效");
+  // Hiện thông báo cập nhật
+  console.log("Trang web được cập nhật, làm mới website để có trải nghiệm tốt nhất !");
+  ElMessage("Trang web được cập nhật, làm mới website để có trải nghiệm tốt nhất !");
 });
